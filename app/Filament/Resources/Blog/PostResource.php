@@ -171,8 +171,7 @@ class PostResource extends Resource
                 Tables\Actions\EditAction::make(),
 
                 Tables\Actions\ViewAction::make('comments')
-                    ->modalContent(fn($record) => view('test',compact('record')))
-                    ,
+                    ->modalContent(fn ($record) => view('test', compact('record'))),
 
                 Tables\Actions\DeleteAction::make(),
             ])

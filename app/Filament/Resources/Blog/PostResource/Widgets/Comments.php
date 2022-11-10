@@ -5,9 +5,9 @@ namespace App\Filament\Resources\Blog\PostResource\Widgets;
 use Closure;
 use Filament\Forms;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Contracts\Support\Htmlable;
 use Filament\Widgets\TableWidget as BaseWidget;
+use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Database\Eloquent\Builder;
 
 class Comments extends BaseWidget
 {
@@ -69,8 +69,8 @@ class Comments extends BaseWidget
             Tables\Actions\ActionGroup::make([
                 Tables\Actions\EditAction::make()
                     ->record($this->record)
-                    ->form($this->getFormSchema())
-            ])
+                    ->form($this->getFormSchema()),
+            ]),
         ];
     }
 }
